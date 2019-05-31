@@ -1,0 +1,29 @@
+.opener {
+	display: inline-block;
+	vertical-align: top;
+	height: 20px;
+
+	span {
+		display: inline-block;
+		vertical-align: top;
+		text-indent: -9999px;
+		height: 2px;
+		width: 30px;
+		background-color: #fff;
+		position: relative;
+
+		&:before,
+		&:after {
+			content: "";
+			height: 2px;
+			width: 30px;
+			position: absolute;
+			top: 10px;
+			left: 0;
+			background-color: #fff; 
+		}
+		&:after {
+			top: 20px;
+		}
+	}
+}

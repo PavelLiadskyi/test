@@ -1,0 +1,67 @@
+.button {
+	display: flex;
+	justify-content: center;
+	padding: 30px;
+	position: relative;
+
+	@media screen and (max-width: 320px) {
+		padding: 20px;
+	}
+
+	&:after {
+		content: '';
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 15px 20px 0 20px;
+		border-color: $bg-top transparent transparent transparent;
+	}
+
+
+	.button-join {
+		
+		margin: 0 10px;
+	}
+	input {
+		display: inline-block;
+		vertical-align: top;
+		width: 140px;
+		padding: 16px 20px;
+		border: 1px solid $border;
+		border-radius: 4px;
+		background-color: transparent;
+		font-family: 'Open Sans', sans-serif;
+		font-weight: 800;
+		font-size: 18px;
+		text-transform: uppercase;
+		color: $white;
+
+		@media screen and (max-width: 768px) {
+			width: 90px;
+			padding: 10px 0;
+			font-size: 15px;
+		}
+
+		@media screen and (max-width: 320px) {
+			width: 70px;
+			padding: 5px 0;
+		}
+
+		&:hover {
+			@extend %transition;
+			border: none;
+			background-color: $sky-blue;
+			cursor: pointer;
+			box-shadow: 0 3px $shadow;
+		}
+	}
+	.activ {
+		border: none;
+		background-color: $sky-blue;
+		border-radius: 4px;
+	}
+}

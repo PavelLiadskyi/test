@@ -1,0 +1,534 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,500");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:800");
+@font-face {
+  font-family: "Gotham black";
+  src: url("../fonts/gothamblack-webfont.eot");
+  src: url("../fonts/gothamblack-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/gothamblack-webfont.woff2") format("woff2"), url("../fonts/gothamblack-webfont.woff") format("woff"), url("../fonts/gothamblack-webfont.ttf") format("truetype"), url("../fonts/gothamblack-webfont.otf");
+}
+.container, #header {
+  max-width: 1170px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .container, #header {
+    max-width: 1000px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container, #header {
+    max-width: 744px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .container, #header {
+    max-width: 300px;
+  }
+}
+
+nav a:hover, .button input:hover {
+  transition: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  background-image: url(../images/background-bottom.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slick-dots li button {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.slick-dots li button:after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  border: 2px solid #000;
+  opacity: 0;
+}
+.slick-dots li button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-color: #000;
+  border-radius: 100%;
+  opacity: 0;
+}
+
+.slick-dots li.slick-active button:after {
+  opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+  position: relative;
+}
+@media screen and (max-width: 320px) {
+  .button {
+    padding: 20px;
+  }
+}
+.button:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 20px 0 20px;
+  border-color: #6c5283 transparent transparent transparent;
+}
+.button .button-join {
+  margin: 0 10px;
+}
+.button input {
+  display: inline-block;
+  vertical-align: top;
+  width: 140px;
+  padding: 16px 20px;
+  border: 1px solid #9884aa;
+  border-radius: 4px;
+  background-color: transparent;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+@media screen and (max-width: 768px) {
+  .button input {
+    width: 90px;
+    padding: 10px 0;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .button input {
+    width: 70px;
+    padding: 5px 0;
+  }
+}
+.button input:hover {
+  border: none;
+  background-color: #69c7e2;
+  cursor: pointer;
+  box-shadow: 0 3px #4c2f65;
+}
+.button .activ {
+  border: none;
+  background-color: #69c7e2;
+  border-radius: 4px;
+}
+
+#header {
+  padding: 50px 0;
+  position: absolute;
+  top: -25px;
+  left: 0;
+  right: 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+}
+@media screen and (max-width: 320px) {
+  .logo img {
+    max-width: 80%;
+  }
+}
+
+.opener {
+  display: none;
+}
+@media screen and (max-width: 320px) {
+  .opener {
+    display: inline-block;
+    vertical-align: top;
+    height: 40px;
+  }
+  .opener span {
+    display: inline-block;
+    vertical-align: top;
+    text-indent: -9999px;
+    height: 2px;
+    width: 30px;
+    background-color: #fff;
+    position: relative;
+  }
+  .opener span:before, .opener span:after {
+    content: "";
+    height: 2px;
+    width: 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    background-color: #fff;
+  }
+  .opener span:after {
+    top: 20px;
+  }
+}
+
+nav li {
+  display: inline-block;
+  vertical-align: top;
+  padding: 0 5px;
+}
+@media screen and (max-width: 320px) {
+  nav li {
+    display: none;
+  }
+}
+nav .activ a {
+  border-radius: 4px;
+  background-color: #f7df59;
+  box-shadow: 0 3px #4c2f65;
+}
+nav a {
+  display: inline-block;
+  vertical-align: top;
+  width: 140px;
+  border: 1px solid #9884aa;
+  border-radius: 4px;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 900;
+  text-decoration: none;
+  padding: 16px 20px;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  nav a {
+    width: 90px;
+    font-size: 15px;
+    padding: 10px 0;
+  }
+}
+@media screen and (max-width: 320px) {
+  nav a {
+    width: 30px;
+    border: none;
+  }
+}
+nav a:before {
+  content: "";
+  position: absolute;
+  top: 89%;
+  left: calc(50% - 7px);
+  display: block;
+  width: 12px;
+  height: 12px;
+  transform: rotate(45deg);
+  background-color: #f7df59;
+  box-shadow: 3px 3px #4c2f65;
+  opacity: 0;
+}
+nav a:hover {
+  border-radius: 4px;
+  background-color: #f7df59;
+  box-shadow: 0 3px #4c2f65;
+}
+
+.activ a:before {
+  opacity: 1;
+}
+
+.top {
+  background-image: url(../images/backgroundtop.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+}
+
+#main {
+  padding-top: 150px;
+}
+@media screen and (max-width: 320px) {
+  #main {
+    padding-top: 110px;
+  }
+}
+
+.title {
+  padding-top: 63px;
+  font-family: Gotham black, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+@media screen and (max-width: 1024px) {
+  .title {
+    padding-top: 0;
+  }
+}
+.title h1 {
+  font-size: 112px;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.065em;
+}
+@media screen and (max-width: 1024px) {
+  .title h1 {
+    font-size: 95px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .title h1 {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title h1 {
+    font-size: 26px;
+  }
+}
+.title h1 span {
+  color: #ead7fb;
+}
+
+.everyday {
+  width: 100%;
+  color: #ffffff;
+  font-family: Gotham black, sans-serif;
+  font-weight: bold;
+  font-size: 34px;
+  text-transform: lowercase;
+  letter-spacing: 0.03em;
+}
+@media screen and (max-width: 1024px) {
+  .everyday {
+    font-size: 29px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .everyday {
+    font-size: 21px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .everyday {
+    font-size: 16px;
+  }
+}
+.everyday:after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #9884aa;
+  margin-top: 40px;
+}
+@media screen and (max-width: 320px) {
+  .everyday:after {
+    margin-top: 20px;
+  }
+}
+
+.join {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  color: #ffffff;
+  font-family: Gotham black, sans-serif;
+  font-weight: 100;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+}
+@media screen and (max-width: 768px) {
+  .join {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .join {
+    margin-top: 20px;
+    font-size: 16px;
+  }
+}
+
+.image {
+  background-color: #ffffff;
+  width: 341px;
+  font-size: 16px;
+  margin: 20px auto;
+  border-radius: 4px;
+}
+@media screen and (max-width: 1024px) {
+  .image {
+    width: 290px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .image {
+    width: 210px;
+  }
+}
+.image img {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  height: auto;
+  padding: 20px;
+  border-radius: 4px;
+}
+.image p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  text-transform: uppercase;
+  color: #6b5181;
+  padding: 10px;
+}
+
+.title-main {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  padding-top: 70px;
+}
+@media screen and (max-width: 768px) {
+  .title-main {
+    padding-top: 50px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title-main {
+    padding-top: 30px;
+  }
+}
+.title-main h2 {
+  font-size: 60px;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: #654d7b;
+  letter-spacing: -0.07em;
+}
+@media screen and (max-width: 768px) {
+  .title-main h2 {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .title-main h2 {
+    font-size: 22px;
+  }
+}
+.title-main p {
+  font-size: 30px;
+  font-weight: 500;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+}
+@media screen and (max-width: 320px) {
+  .title-main p {
+    font-size: 20px;
+  }
+}
+
+.box {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 15px 0;
+}
+@media screen and (max-width: 320px) {
+  .box {
+    display: block;
+  }
+}
+
+.text {
+  background-color: #ffffff;
+  border-radius: 4px;
+  margin-top: 80px;
+  font-family: "Roboto", sans-serif;
+  font-size: 13px;
+  line-height: 30px;
+  padding: 30px 20px;
+}
+@media screen and (max-width: 768px) {
+  .text {
+    margin-top: 35px;
+  }
+}
+.text p {
+  font-weight: 300;
+  color: #6b5181;
+}
+.text strong {
+  font-weight: 500;
+}
+
+.line:before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #6d5384;
+  margin: 70px 0 50px;
+}
+@media screen and (max-width: 320px) {
+  .line:before {
+    margin: 30px 0;
+  }
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 320px) {
+  footer {
+    display: block;
+  }
+}
+footer p {
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 14px;
+  color: #6d5384;
+  padding-bottom: 70px;
+}
+@media screen and (max-width: 320px) {
+  footer p {
+    padding-bottom: 30px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
